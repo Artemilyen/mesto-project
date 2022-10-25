@@ -1,0 +1,11 @@
+/*{
+    border: 1px red solid;
+    box-sizing: border-box;
+}*/
+
+.page{
+    max-width: 1280px;
+    background-color: black;
+    margin: 0 auto;
+    font-family: "Inter", "Arial", sans-serif;
+}

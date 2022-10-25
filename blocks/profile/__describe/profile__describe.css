@@ -1,0 +1,4 @@
+.profile__describe{
+    display: flex;
+    flex-direction: column;
+}

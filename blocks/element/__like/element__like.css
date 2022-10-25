@@ -1,0 +1,15 @@
+.element__like{
+    background-color: white;
+    border: none;
+    margin: 0;
+    padding: 0;
+    max-width: 22px;
+    max-height: 19px;
+    margin-right: 20px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.element__like:hover{
+    opacity: .5;
+}

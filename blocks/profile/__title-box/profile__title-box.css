@@ -1,0 +1,11 @@
+.profile__title-box {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__title-box {
+    margin-left: 26px;
+  }
+}
