@@ -48,8 +48,8 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
   },
   {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    name: 'Водопад Виктория',
+    link: 'https://ic.pics.livejournal.com/e_kaspersky/24977487/8462483/8462483_original.jpg'
   },
   {
     name: 'Иваново',

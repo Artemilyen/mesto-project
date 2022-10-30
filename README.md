@@ -1,6 +1,6 @@
 # Учебный проект "Место"
 
-[Итоговая версия проекта](https://artemilyen.github.io/mesto-project/index.html) 
+[Итоговая версия проекта](https://artemilyen.github.io/mesto-project/) 
 [Макет Figma](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=50160%3A110)
 
 ---
