@@ -149,13 +149,14 @@ function openPopupImage(){
 function closePopupImage(){
   imagePopup.classList.remove('popup_opened') ;
  }
- popupImageCloseButton.addEventListener('click', closePopupImage);
+ 
 
 const imagePopup = document.querySelector('.popup-image');
 const imagePopupPic = document.querySelector('.popup-image__picture');
 const imagePopupTitle = document.querySelector('.popup-image__title');
 const cardImage = document.querySelector('.element__image')
 const popupImageCloseButton = document.querySelector('#popup__close-button');
+popupImageCloseButton.addEventListener('click', closePopupImage);
 
 cardImage.addEventListener('click', zoomImage);
 
