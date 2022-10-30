@@ -40,6 +40,10 @@ saveForm.addEventListener("submit", submitForm);
 
 const initialCards = [
   {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  },
+  {
     name: 'Архыз',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
   },
@@ -59,10 +63,6 @@ const initialCards = [
     name: 'Холмогорский район',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
   },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
 ];
 
 //добавляет изначальные карточки в профиль 
@@ -141,14 +141,32 @@ saveCardForm.addEventListener("click", function (evt) {
   evt.preventDefault();
   submitNewCard();
 });
+//открытие и закрытие попапа с изображением
+function openPopupImage(){
+ imagePopup.classList.add('popup_opened') ;
+}
 
-//открытие попапа с изображением
-// function zoomImage (event) {
-//   const currentElement = event.target.closest(selectors.cardElement);
-//   const currentElementTitle = currentElement.querySelector(selectors.elementTitle);
-//   const currentElementImage = currentElement.querySelector(selectors.elementImage);
-//   imagePopupPic.src = currentElementImage.src;
-//   imagePopupTitle.textContent = currentElementTitle.textContent;
-//   imagePopupPic.alt = currentElementTitle.textContent;
-//   openPopup(imagePopup);
-// };
+function closePopupImage(){
+  imagePopup.classList.remove('popup_opened') ;
+ }
+ popupImageCloseButton.addEventListener('click', closePopupImage);
+
+const imagePopup = document.querySelector('.popup-image');
+const imagePopupPic = document.querySelector('.popup-image__picture');
+const imagePopupTitle = document.querySelector('.popup-image__title');
+const cardImage = document.querySelector('.element__image')
+const popupImageCloseButton = document.querySelector('#popup__close-button');
+
+cardImage.addEventListener('click', zoomImage);
+
+//открытие попапа с изображением, поиск и передача нужного изображения и заголовка 
+function zoomImage (event){
+  const currentElement = event.target.closest('.element');
+  const currentElementTitle = document.querySelector('.element__title');
+  const currentElementImage = document.querySelector('.element__image');
+  imagePopupPic.src = currentElementImage.src;
+  imagePopupTitle.textContent = currentElementTitle.textContent;
+  imagePopupPic.alt = currentElementTitle.textContent;  
+  openPopupImage();
+  console.log(currentElement);
+}
