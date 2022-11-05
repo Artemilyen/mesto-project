@@ -79,20 +79,20 @@ function addInitialCards(){
 function createCard(cardName, cardLink){
   const cardTemplate = document.querySelector("#element-template").content;
   const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
+  const elementImage = cardElement.querySelector('.element__image');
   cardElement.querySelector(".element__title").textContent = cardName;
-  cardElement.querySelector(".element__image").src = cardLink;
-  cardElement.querySelector(".element__image").alt = cardName;
+  elementImage.src = cardLink;
+  elementImage.alt = cardName;
   const deleteButton = cardElement.querySelector('.element__image-delete');
   deleteButton.addEventListener('click', function(){
     cardElement.remove();
   })
-  const likeButtons = cardElement.querySelector('.element__like');
-  likeButtons.addEventListener('click', function(){
-    likeButtons.classList.toggle('element__like_active');
+  const likeButton = cardElement.querySelector('.element__like');
+  likeButton.addEventListener('click', function(){
+    likeButton.classList.toggle('element__like_active');
   })
-  const largerImage = cardElement.querySelector('.element__image');
-  largerImage.addEventListener('click', function(){
-    imagePopupPic.src = largerImage.src;  
+  elementImage.addEventListener('click', function(){
+    imagePopupPic.src = elementImage.src;  
     imagePopupTitle.textContent = cardElement.textContent;
     imagePopupPic.alt = cardElement.textContent;  
     openPopup(imagePopup)
